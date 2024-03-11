@@ -5,6 +5,8 @@ void main() {
     const MyApp(),
   );
 }
+
+//stless-Stateless Widget, is used to trigger hot reload and hot restart
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: SafeArea(
+        body: SafeArea(// SafeArea is used to avoid intrusions
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -31,24 +33,24 @@ class MyApp extends StatelessWidget {
               ),
               Text('Flutter Developer',
                 style: TextStyle(
-                  fontFamily: 'SourceSans3',
+                  fontFamily: 'SourceSans3',// fonts.google.com
                   fontSize: 20.0,
                   color: Colors.white60,
-                  letterSpacing: 2.5,
+                  letterSpacing: 2.5, // space between letters
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(
                 height: 20.0,
                 width: 150.0,
-                child: Divider(
+                child: Divider(//a thin horizontal line with padding
                   color: Colors.white60,
                 ),
               ),
-              Card(
+              Card(// a panel with rounded corners and elevation shadow
                 margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
                 color: Colors.white,
-                child: ListTile(
+                child: ListTile(//helps to list the widgets in a order with padding
                   leading: Icon(
                     Icons.phone,
                     color: Colors.teal,
